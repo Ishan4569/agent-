@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Field</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- International Telephone Input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-group">
+        <label for="phoneNumber">Mobile Number</label>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <!-- Flag icon will be inserted here by the intl-tel-input library -->
+            </span>
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Mobile Number">
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- International Telephone Input JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+
+<!-- Initialize the International Telephone Input -->
+<script>
+    $(document).ready(function () {
+        $("#phoneNumber").intlTelInput({
+            separateDialCode: true,
+            nationalMode: false,
+            initialCountry: "auto",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+        });
+    });
+</script>
+
+</body>
+</html>
